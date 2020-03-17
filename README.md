@@ -1,5 +1,4 @@
 # lambda_achitecture
-==============================================
 
 Copyright (c) 2020 Vu The Anh.
 

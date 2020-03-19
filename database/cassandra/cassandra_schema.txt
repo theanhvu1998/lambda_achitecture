@@ -1,3 +1,7 @@
+flat = number
+text = string
+boolean = boolean
+
 # created database:
 	CREATE KEYSPACE monitorsystem WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 3};
 
@@ -5,7 +9,7 @@
 
 created table messen:
 	CREATE TABLE messen(
-	Messen_id text PRIMARY KEY,
+	id text PRIMARY KEY,
 	User_id text,
 	Generator_id text,
 	C_O2 float,
@@ -18,7 +22,7 @@ created table messen:
 	U_AB float,
 	I_A float,
 	I_B float,
-	I_c float,
+	I_C float,
 	Veclovity float,
 	Momen float,
 	Type smallint,
@@ -27,7 +31,8 @@ created table messen:
 
 created table user_active:
 	CREATE TABLE user_active(
-	User_id text PRIMARY KEY,
+	id text PRIMARY KEY,
+	User_id text,
 	Time timestamp,
 	type boolean,
 	Created timestamp,
@@ -37,7 +42,7 @@ created table user_active:
 
 created table user:
 	CREATE TABLE user(
-	User_id text PRIMARY KEY,
+	id text PRIMARY KEY,
 	Generator_id text,
 	Name text,
 	City smallint,
@@ -52,7 +57,7 @@ created table user:
 
 created table generator:
 	CREATE TABLE generator(
-	Generator_id text PRIMARY KEY,
+	id text PRIMARY KEY,
 	User_id text,
 	Dateinstall date,
 	city smallint,
@@ -65,7 +70,7 @@ created table generator:
 
 created table analytic_admin:
 	CREATE TABLE analytic_user(
-	Analytic_user_id text PRIMARY KEY,
+	id text PRIMARY KEY,
 	Total_user smallint,
 	User_online smallint,
 	User_offline smallint,
@@ -76,7 +81,7 @@ created table analytic_admin:
 
 created table analytic_city:
 	CREATE TABLE analytic_city(
-	Analytic_city_id text PRIMARY KEY,
+	id text PRIMARY KEY,
 	City_id text,
 	Total_user smallint,
 	Total_time_active int,
@@ -86,7 +91,8 @@ created table analytic_city:
 
 created table analytic_user:
 	CREATE TABLE analytic_user_detail(
-	User_id text PRIMARY KEY,
+	id text PRIMARY KEY,
+	User_id text,
 	Rank smallint,
 	Total_time_active int,
 	Time_active smallint,
@@ -96,8 +102,9 @@ created table analytic_user:
 
 created table detect_false:
 	CREATE TABLE detect_false(
-	Detect_false_id text PRIMARY KEY,
+	id text PRIMARY KEY,
 	User_ID text,
+	Generator_id text,
 	False_detail text,
 	Created timestamp, 
 	);

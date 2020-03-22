@@ -1,0 +1,10 @@
+Insert into monitorsystem.messen(id, User_id, Generator_id, C_O2, C_H2S, C_CH4, T_H2O, T_Machine, T_Evironment, P_Oil, P_Tank, U_AB, I_A, I_B, I_c, Veclovity, Momen, Type, Created)
+values ('f5922bbc-8029-4bb9-9643-108f1319b119', 'b26d2b60-4d11-402f-82d0-5224f9eb8557', '6683ce7c-356e-4eb5-89a4-3ab8193ecf7c', 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 1299045600000);
+
+Insert into monitorsystem.messen(id, User_id, Generator_id, C_O2, C_H2S, C_CH4, T_H2O, T_Machine, T_Evironment, P_Oil, P_Tank, U_AB, I_A, I_B, I_c, Veclovity, Momen, Type, Created)
+values ('e43dfd4b-2c5e-4eae-9ae0-4adb19013cef', '5763b680-d698-40fe-abc7-24a986478db5', '96e63cb9-5681-4586-8134-a3b9814e39de', 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1299055500000);
+
+Insert into monitorsystem.messen(id, User_id, Generator_id, C_O2, C_H2S, C_CH4, T_H2O, T_Machine, T_Evironment, P_Oil, P_Tank, U_AB, I_A, I_B, I_c, Veclovity, Momen, Type, Created)
+values ('e03e4f03-c9dd-4ceb-8eb5-00c05a48b19b', 'e0792475-b30d-4074-b861-f0a75a354d4e', '96c03a9e-8c99-4a26-95d4-9d4f14ec630a', 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 1299067800000);
+
+

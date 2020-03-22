@@ -1,6 +1,8 @@
 package batch_layer
 
-import akka.actor.{Actor, ActorSystem, Props}
+import akka.actor.{Actor}
+import org.apache.spark.sql.functions._
+
 class analytic {
   //Create a Spark session which connect to Cassandra
   val spark = org.apache.spark.sql.SparkSession
@@ -31,6 +33,17 @@ class analytic {
     println("Total number of rows: " + df.count())
     println("First 15 rows of the DataFrame: ")
     df.show(15)
+
+    val dff = df.groupBy("User_id")
+      .agg(
+        sum("C_O2").as("sum_C_O21"),
+        avg("C_O2").as("avg_C_O22"),
+        sum("C_O2").as("sum_C_O2"),
+        max( unix_timestamp(col("Created"))).as("maxtime"))
+    val uuid = udf(() => java.util.UUID.randomUUID().toString)
+
+    val dfa=dff.withColumn("id", uuid())
+    dfa.show(15)
   }
 }
 
@@ -47,5 +60,4 @@ class BatchProcessingActor(spark_processor: analytic) extends Actor{
       spark_processor.Analitics
     }
   }
-
 }

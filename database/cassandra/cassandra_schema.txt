@@ -14,6 +14,7 @@ created table messen:
 	Generator_id text,
 	C_O2 float,
 	C_H2S float,
+	C_CH4 float,
 	T_H2O float,
 	T_Machine float,
 	T_Evironment float,

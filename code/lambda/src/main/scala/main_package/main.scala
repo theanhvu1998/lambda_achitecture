@@ -1,12 +1,9 @@
 package main_package
 
-import akka.actor.{Actor, ActorSystem, Props}
+import akka.actor.{ActorSystem, Props}
 import batch_layer.{AnalyticProcessing, BatchProcessingActor, analytic}
 import config.AppConfiguration
-
-
 import scala.concurrent.duration._
-import org.apache.spark.sql.functions.lower
 
 
 object main {

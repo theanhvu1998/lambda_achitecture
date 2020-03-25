@@ -1,3 +1,0 @@
-
-
-/home/anhvu/kafka/bin/connect-standalone.sh /home/anhvu/kafka/config/connect-standalone.properties /lambda_achitecture/kafka_connector/cassandra-sink.properties /lambda_achitecture/kafka_connector/mqtt-source.properties

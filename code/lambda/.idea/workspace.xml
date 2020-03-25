@@ -1,31 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="lambda:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd1540d5-fcd9-439d-9a69-b8bac0190be8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lambda_achitecture.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/batch_layer/analytic.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/batch_layer/analytic.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/batch_layer/detectFalse.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/config/AppConfiguration.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/config/AppConfiguration.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/main_package/main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/main_package/main.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/lambda_achitecture.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/batch_layer/AnalyticProcessing$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/batch_layer/AnalyticProcessing$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/batch_layer/BatchProcessingActor$$anonfun$receive$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/batch_layer/BatchProcessingActor$$anonfun$receive$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/batch_layer/BatchProcessingActor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/batch_layer/BatchProcessingActor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/batch_layer/analytic.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/batch_layer/analytic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/batch_layer/detectFalse$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/batch_layer/detectFalse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/AppConfiguration$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/AppConfiguration$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main_package/main$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main_package/main$$anonfun$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main_package/main$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main_package/main$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../database/cassandra/cassandra_schema.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../database/cassandra/cassandra_schema.txt" afterDir="false" />
-    </list>
+    <list default="true" id="dd1540d5-fcd9-439d-9a69-b8bac0190be8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,6 +85,22 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="170" y="316" width="518" height="306" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/67.27.1299.741@67.27.1299.741" timestamp="1584900055911" />
+    <state width="1253" height="175" key="GridCell.Tab.0.bottom" timestamp="1584900915683">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1584900915683" />
+    <state width="1253" height="175" key="GridCell.Tab.0.center" timestamp="1584900915683">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1584900915683" />
+    <state width="1253" height="175" key="GridCell.Tab.0.left" timestamp="1584900915682">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1584900915682" />
+    <state width="1253" height="175" key="GridCell.Tab.0.right" timestamp="1584900915683">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1584900915683" />
     <state x="199" y="27" width="1024" height="741" key="SettingsEditor" timestamp="1584900558871">
       <screen x="67" y="27" width="1299" height="741" />
     </state>

@@ -1,0 +1,3 @@
+
+
+/home/anhvu/kafka/bin/connect-standalone.sh /home/anhvu/kafka/config/connect-standalone.properties /home/anhvu/kafka/config/cassandra-sink-messen.properties /home/anhvu/kafka/config/mqtt-source-messen.properties

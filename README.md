@@ -161,7 +161,7 @@ Requires=network.target remote-fs.target
 After=network.target remote-fs.target
 [Service]
 Type=simple
-ExecStart=/home/anhvu/kafka/bin/zookeeper-server-start.sh /home/anhvu/kafka/con$
+ExecStart=/home/anhvu/kafka/bin/zookeeper-server-start.sh /home/anhvu/kafka/config/zookeeper.properties
 ExecStop=/home/anhvu/kafka/bin/zookeeper-server-stop.sh
 Restart=on-abnormal
 [Install]
@@ -179,7 +179,7 @@ Requires=zookeeper.service
 After=zookeeper.service
 [Service]
 Type=simple
-ExecStart=/bin/sh -c '/home/anhvu/kafka/bin/kafka-server-start.sh /home/anhvu/k$
+ExecStart=/bin/sh -c '/home/anhvu/kafka/bin/kafka-server-start.sh /home/anhvu/kafka/config/server.properties > /home/anhvu/kafka/kafka.log 2>&1'
 ExecStop=/home/anhvu/kafka/bin/kafka-server-stop.sh
 Restart=on-abnormal
 [Install]
@@ -193,12 +193,11 @@ $ sudo nano /etc/systemd/system/lambda.service
 Paste the following lines into it:
 ```
 [Unit]
-Requires=kafka.service
-After=kafka.service
+Requires=kafka.service zookeeper.service
+After=kafka.service zookeeper.service
 [Service]
 Type=simple
-ExecStart=/home/anhvu/kafka/bin/connect-standalone.sh /home/anhvu/kafka/config/$
-ExecStop=/home/anhvu/kafka/bin/kafka-server-stop.sh
+ExecStart=/home/anhvu/kafka/bin/connect-standalone.sh /home/anhvu/kafka/config/connect-standalone.properties /home/anhvu/kafka/config/cassandra-sink-lambda.properties /home/anhvu/kafka/config/mqtt-source-lambda.properties
 Restart=on-abnormal
 [Install]
 WantedBy=multi-user.target
@@ -207,9 +206,8 @@ WantedBy=multi-user.target
 ### run service
 
 ```
-$ sudo systemctl enable kafka
-$ sudo systemctl start kafka
-$ sudo systemctl start lambda.service
+$ sudo systemctl enable lambda
+$ sudo systemctl start lambda
 ```
 
 # Usage
@@ -218,5 +216,5 @@ $ sudo systemctl start lambda.service
 Replace /home/anhvu/lambda_achitecture/code/dist/scala/lambda_jarlambda.jar by path to your jar file and main_package.main by your class name
 
 ```
-$ spark-submit --class main_package.main --master local /home/anhvu/lambda_achitecture/code/dist/scala/lambda_jarlambda.jar
+$ spark-submit --class main_package.main --master local /home/anhvu/lambda_achitecture/code/dist/scala/lambda_jar/lambda.jar
 ```

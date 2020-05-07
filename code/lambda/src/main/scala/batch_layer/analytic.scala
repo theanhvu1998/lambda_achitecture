@@ -1,7 +1,11 @@
 package batch_layer
 
-import akka.actor.{Actor}
+import akka.actor.Actor
 import org.apache.spark.sql.functions._
+import org.apache.spark.ml.feature.VectorAssembler
+import org.apache.spark.mllib.linalg.{Vector, Vectors}
+import org.apache.spark.mllib.linalg.distributed.RowMatrix
+import org.apache.spark.sql.SaveMode
 
 class analytic {
   //Create a Spark session which connect to Cassandra
@@ -24,26 +28,92 @@ class analytic {
   def Analitics: Unit = {
 
     //Read master_dataset table using DataFrame
-    val df = spark.read
+    val MesageData = spark.read
       .format("org.apache.spark.sql.cassandra")
-      .options(Map("table" -> "messen", "keyspace" -> "monitorsystem"))
+      .options(Map("table" -> "messenger", "keyspace" -> "monitorsystem"))
       .load()
+    /**
+     * Get data form cassandra
+     * Transform data and analytic
+     *  Save data to cassandra
+     * */
+    // val uuid = udf(() => java.util.UUID.randomUUID().toString)
+    //  val dfa=dff.withColumn("uuid", uuid())
 
-    //Display some data of master_dataset
-    println("Total number of rows: " + df.count())
-    println("First 15 rows of the DataFrame: ")
-    df.show(15)
+    // get all data
+    val MesageDataElectric=MesageData.select(col("data"),col("msgid").as("id"),col("time"))
 
-    val dff = df.groupBy("User_id")
-      .agg(
-        sum("C_O2").as("sum_C_O21"),
-        avg("C_O2").as("avg_C_O22"),
-        sum("C_O2").as("sum_C_O2"),
-        max( unix_timestamp(col("Created"))).as("maxtime"))
-    val uuid = udf(() => java.util.UUID.randomUUID().toString)
+    // transform data
+    val MesageDataElectricPaser=MesageDataElectric
+      .select(explode($"data").as("data"),col("id").as("id"),col("time").as("time"))
 
-    val dfa=dff.withColumn("id", uuid())
-    dfa.show(15)
+    // get data electric
+    val ia=MesageDataElectricPaser
+      .select(col("id").as("idia"),$"data".getItem("v").alias("g01eleia").cast("Float"))
+      .filter($"data".getItem("id").===("g01eleia"))
+    val ib=MesageDataElectricPaser
+      .select(col("id").as("idib"),$"data".getItem("v").alias("g01eleib").cast("Float"))
+      .filter($"data".getItem("id").===("g01eleib"))
+    val ic=MesageDataElectricPaser
+      .select(col("id").as("idic"),$"data".getItem("v").alias("g01eleic").cast("Float"))
+      .filter($"data".getItem("id").===("g01eleic"))
+    val vab=MesageDataElectricPaser
+      .select(col("id").as("idvab"),$"data".getItem("v").alias("g01elevab").cast("Float"))
+      .filter($"data".getItem("id").===("g01elevab"))
+    val f=MesageDataElectricPaser
+      .select(col("id").as("idf"),$"data".getItem("v").alias("g01elef").cast("Float"))
+      .filter($"data".getItem("id").===("g01elef"))
+    val s=MesageDataElectricPaser
+      .select(col("id").as("ids"),$"data".getItem("v").alias("g01eles").cast("Float"))
+      .filter($"data".getItem("id").===("g01eles"))
+
+    // get data environment
+    val po=MesageDataElectricPaser
+      .select(col("id").as("id"),$"data".getItem("v").alias("g01envpo").cast("Float"))
+      .filter($"data".getItem("id").===("g01envpo"))
+    val o2=MesageDataElectricPaser
+      .select(col("id").as("id"),$"data".getItem("v").alias("g01envo2").cast("Float"))
+      .filter($"data".getItem("id").===("g01envo2"))
+    val h2s=MesageDataElectricPaser
+      .select(col("id").as("id"),$"data".getItem("v").alias("g01envh2s").cast("Float"))
+      .filter($"data".getItem("id").===("g01envh2s"))
+
+    // get data operation
+    val tb=MesageDataElectricPaser
+      .select(col("id").as("tbid"),$"data".getItem("v").alias("g01opetb").cast("Float"),col("time").as("tbtime"))
+      .filter($"data".getItem("id").===("g01opetb"))
+    val te=MesageDataElectricPaser
+      .select(col("id").as("teid"),$"data".getItem("v").alias("g01opete").cast("Float"),col("time").as("tetime"))
+      .filter($"data".getItem("id").===("g01opete"))
+
+    // analytic data electric
+    val joinedata=ia.join(ib,ia("idia")===ib("idib"),"INNER")
+      .join(ic,ia("idia")===ic("idic"),"INNER")
+      .join(vab,ia("idia")===vab("idvab"),"INNER")
+      .join(f,ia("idia")===f("idf"),"INNER")
+      .join(s,ia("idia")===s("ids"),"INNER")
+
+    val joinodata=tb.join(te,te("teid")===tb("tbid"),"INNER")
+
+    val endodata=joinodata.select(col("tbid").as("id"),col("g01opetb"),col("g01opete"),month(from_unixtime((col("tbtime")/1000).cast("Bigint"))).as("time"))
+        .withColumn("durable",(joinodata("g01opete")-joinodata("g01opetb"))/3600000/1000)
+    endodata.show(1000)
+
+    // tranform data to vector
+ //   val endedata=new VectorAssembler().
+  //    setInputCols(Array( "g01eleia","g01eleib", "g01eleic","g01elevab","g01elef","g01eles")).
+  //    setOutputCol("features").
+   //   transform(joinedata)
+
+    // tranfrom vector data
+   // val cassndaradata=endedata.select(col("idia").as("id"),col("g01elef"),col("g01eleia"),col("g01eleib"),col("g01eleic"),col("g01eles"),col("g01elevab"))
+
+    // Save new data to table
+  // cassndaradata.write.format("org.apache.spark.sql.cassandra")
+   //  .options(Map("keyspace" -> "monitorsystem", "table" -> "ml"))
+   //  .mode(SaveMode.Append)
+   //  .save()
+   // cassndaradata.show()
   }
 }
 
@@ -56,7 +126,7 @@ class BatchProcessingActor(spark_processor: analytic) extends Actor{
   def receive = {
     //Start hashtag batch processing
     case AnalyticProcessing => {
-      println("\nStart hashtag batch processing...")
+      println("\nStart batch processing...")
       spark_processor.Analitics
     }
   }

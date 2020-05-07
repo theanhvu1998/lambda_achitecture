@@ -1,42 +1,33 @@
-flat = number
+float = number
 text = string
 boolean = boolean
 
 # created database:
-	CREATE KEYSPACE monitorsystem WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 3};
+	CREATE KEYSPACE monitorsystem WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 1};
 
+===============================================================================================================================================
 # real-time tables
 
-created table messen:
-	CREATE TABLE messen(
-	id text PRIMARY KEY,
-	User_id text,
-	Generator_id text,
-	C_O2 float,
-	C_H2S float,
-	C_CH4 float,
-	T_H2O float,
-	T_Machine float,
-	T_Evironment float,
-	P_Oil float,
-	P_Tank float,
-	U_AB float,
-	I_A float,
-	I_B float,
-	I_C float,
-	Veclovity float,
-	Momen float,
-	Type smallint,
-	Created timestamp,
+
+
+created table messenger:
+	CREATE TABLE messenger(
+	msgid text PRIMARY KEY,
+	sessionid text,
+	rpi text,
+	time bigint,
+	Type text,
+	data list<frozen<map<text,text>>>,
 	);
 
-created table user_active:
-	CREATE TABLE user_active(
+created table status:
+	CREATE TABLE status(
 	id text PRIMARY KEY,
-	User_id text,
-	Time timestamp,
-	type boolean,
-	Created timestamp,
+	rpi text,
+	userid text,
+	time bigint,
+	status smallint,
+	messenger text,
 	);
 
 # infor tables
@@ -44,80 +35,92 @@ created table user_active:
 created table user:
 	CREATE TABLE user(
 	id text PRIMARY KEY,
-	Generator_id text,
-	Name text,
-	City smallint,
-	Adress text,
-	Company text,
-	Phone text,
-	Mail text,
-	Sex boolean,
-	Type smallint,
-	Created timestamp,
+	generator_id text,
+	name text,
+	city smallint,
+	adress text,
+	company text,
+	phone text,
+	mail text,
+	sex boolean,
+	type smallint,
+	time bigint,
 	);
 
 created table generator:
 	CREATE TABLE generator(
 	id text PRIMARY KEY,
-	User_id text,
-	Dateinstall date,
+	userid text,
+	insatll bigint,
 	city smallint,
 	size smallint,
 	type smallint,
-	Created timestamp,
+	time bigint,
 	);
 
 # analytic tables
 
 created table analytic_admin:
-	CREATE TABLE analytic_user(
+	CREATE TABLE analyticadmin(
 	id text PRIMARY KEY,
 	Total_user smallint,
-	User_online smallint,
-	User_offline smallint,
-	User_disconnect smallint,
+	Start bigint,
+	Stop bigint,
+	Disconnect smallint,
 	Top_user text,
-	Created timestamp,
+	time bigint,
 	);
 
 created table analytic_city:
-	CREATE TABLE analytic_city(
+	CREATE TABLE analyticcity(
 	id text PRIMARY KEY,
 	City_id text,
 	Total_user smallint,
 	Total_time_active int,
 	Top_user text,
-	Created timestamp,
+	time bigint,
 	);
 
 created table analytic_user:
-	CREATE TABLE analytic_user_detail(
+	CREATE TABLE analyticuser(
 	id text PRIMARY KEY,
 	User_id text,
 	Rank smallint,
 	Total_time_active int,
-	Time_active smallint,
 	Disconnects_count smallint,
-	Created timestamp,
+	time bigint,
 	);
 
-created table detect_false:
-	CREATE TABLE detect_false(
+created table detectfalse:
+	CREATE TABLE detectfalse(
 	id text PRIMARY KEY,
 	User_ID text,
 	Generator_id text,
 	False_detail text,
-	Created timestamp, 
+	time bigint, 
+	);
+
+created table ml:
+	CREATE TABLE ml(
+	id text PRIMARY KEY,
+	g01eleia float,
+	g01eleib float,
+	g01eleic float,
+	g01elevab float,
+	g01eles float,
+	g01elef float,
 	);
 
 # defaul tables
 
 created table city:
 	CREATE TABLE city(
-	City_id smallint PRIMARY KEY,
-	City_amchart_id text,
-	Name text,
-	Side smallint,
+	id smallint PRIMARY KEY,
+	amcahrtid text,
+	name text,
+	name_eng text,
+	type text,
+	type_eng text,
 	);
 
 created table date:

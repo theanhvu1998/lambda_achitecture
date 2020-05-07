@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="datacollect:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/datacollect_jar</output-path>
+    <root id="archive" name="datacollect.jar">
+      <element id="module-output" name="datacollect" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/datastax/spark/spark-cassandra-connector_2.11/2.3.0/spark-cassandra-connector_2.11-2.3.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/typesafe/akka/akka-actor_2.11/2.5.29/akka-actor_2.11-2.5.29.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/typesafe/config/1.3.1/config-1.3.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

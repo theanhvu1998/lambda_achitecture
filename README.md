@@ -193,8 +193,8 @@ $ sudo nano /etc/systemd/system/lambda.service
 Paste the following lines into it:
 ```
 [Unit]
-Requires=kafka.service zookeeper.service
-After=kafka.service zookeeper.service
+Requires=kafka.service
+After=kafka.service
 [Service]
 Type=simple
 ExecStart=/home/anhvu/kafka/bin/connect-standalone.sh /home/anhvu/kafka/config/connect-standalone.properties /home/anhvu/kafka/config/cassandra-sink-lambda.properties /home/anhvu/kafka/config/mqtt-source-lambda.properties

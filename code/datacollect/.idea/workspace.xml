@@ -7,49 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aad305fb-892f-4e50-be11-7605aee01410" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/datacollect_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datacollect.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vietnamLow.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/date_collect/datecollect.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/main_package/main.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/map_collect/mapcollect.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lambda/src/main/scala/speed_layer/real_time_data.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/scala/lambda_jar/lambda.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../dist/scala/lambda_jar/lambda.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lambda/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lambda/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lambda/out/artifacts/lambda_jar/lambda.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../lambda/out/artifacts/lambda_jar/lambda.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lambda/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lambda/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lambda/src/main/resources/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/../lambda/src/main/resources/application.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lambda/src/main/scala/batch_layer/analytic.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../lambda/src/main/scala/batch_layer/analytic.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lambda/src/main/scala/main_package/main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../lambda/src/main/scala/main_package/main.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lambda/target/classes/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/../lambda/target/classes/application.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lambda/target/classes/batch_layer/AnalyticProcessing$.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lambda/target/classes/batch_layer/AnalyticProcessing$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lambda/target/classes/batch_layer/BatchProcessingActor$$anonfun$receive$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lambda/target/classes/batch_layer/BatchProcessingActor$$anonfun$receive$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lambda/target/classes/batch_layer/BatchProcessingActor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lambda/target/classes/batch_layer/BatchProcessingActor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lambda/target/classes/batch_layer/analytic$$anonfun$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lambda/target/classes/batch_layer/analytic$$typecreator1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lambda/target/classes/batch_layer/analytic.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lambda/target/classes/batch_layer/analytic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lambda/target/classes/main_package/main$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lambda/target/classes/main_package/main$$anonfun$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lambda/target/classes/main_package/main$.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lambda/target/classes/main_package/main$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lambda/target/classes/main_package/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lambda/target/classes/main_package/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../database/cassandra/cassandra_schema.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../database/cassandra/cassandra_schema.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kafka/kafka_connector/cassandra-sink-lambda.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../kafka/kafka_connector/cassandra-sink-lambda.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kafka/kafka_connector/cassandra-source.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kafka/kafka_connector/guide.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kafka/kafka_connector/mongodb-sink.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kafka/kafka_connector/mqtt-source-lambda.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../kafka/kafka_connector/mqtt-source-lambda.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kafka/kafka_connector/mqtt-source-messen.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kafka/kafka_connector/mqtt-source-user-active.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kafka/kafka_connector/mqtt-source.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mqtt/messen.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../mqtt/messen.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +36,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lambda" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />

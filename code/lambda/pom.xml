@@ -99,11 +99,9 @@
             <artifactId>lift-json_2.11</artifactId>
             <version>3.4.1</version>
         </dependency>
-
     </dependencies>
     <build>
         <plugins>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>

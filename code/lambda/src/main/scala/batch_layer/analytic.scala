@@ -97,7 +97,7 @@ class analytic {
 
     val endodata=joinodata.select(col("tbid").as("id"),col("g01opetb"),col("g01opete"),month(from_unixtime((col("tbtime")/1000).cast("Bigint"))).as("time"))
         .withColumn("durable",(joinodata("g01opete")-joinodata("g01opetb"))/3600000/1000)
-    endodata.show(1000)
+    joinedata.show(1000)
 
     // tranform data to vector
  //   val endedata=new VectorAssembler().
@@ -114,6 +114,12 @@ class analytic {
    //  .mode(SaveMode.Append)
    //  .save()
    // cassndaradata.show()
+    joinedata.selectExpr("CAST(idia AS STRING) AS key", "to_json(struct(*)) AS value")
+      .write
+      .format("kafka")
+      .option("kafka.bootstrap.servers", "localhost:9092")
+      .option("topic", "test")
+      .save()
   }
 }
 

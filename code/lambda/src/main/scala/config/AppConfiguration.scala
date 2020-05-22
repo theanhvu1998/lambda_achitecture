@@ -8,7 +8,6 @@ object AppConfiguration {
   val config = ConfigFactory.load()
   // Kafka Config
   val kafkaTopic=config.getString("kafka.topic")
-  val kafkaKeywords = config.getStringList("kafka.keywords").toList
 
   // Batch processing config
   // Convert Duration to Finite Duration

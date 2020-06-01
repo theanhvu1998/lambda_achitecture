@@ -3,6 +3,8 @@ package main_package
 import akka.actor.{ActorSystem, Props}
 import batch_layer.{AnalyticProcessing, BatchProcessingActor, analytic}
 import config.AppConfiguration
+import speed_layer.{realTimeProcessingActor, real_time_data}
+
 import scala.concurrent.duration._
 
 
@@ -17,7 +19,8 @@ object main {
     val actorSystem = ActorSystem("ActorSystem");
 
     //Create batch actor
-    val batchActor = actorSystem.actorOf(Props(new BatchProcessingActor(new analytic)))
+    val realtimeActor = actorSystem.actorOf(Props(new realTimeProcessingActor( new real_time_data)))
+    val batchActor = actorSystem.actorOf(Props(new BatchProcessingActor(new analytic,realtimeActor)))
 
     //Using akka scheduler to run the batch processing periodically
     import actorSystem.dispatcher

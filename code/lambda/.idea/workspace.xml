@@ -5,24 +5,45 @@
       <artifact name="lambda:jar" />
     </artifacts-to-build>
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="dd1540d5-fcd9-439d-9a69-b8bac0190be8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../datacollect/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../datacollect/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../datacollect/target/classes/date_collect/datecollect$$anonfun$collectdata$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../datacollect/target/classes/date_collect/datecollect$$anonfun$collectdata$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../datacollect/target/classes/date_collect/datecollect$$typecreator5$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../datacollect/target/classes/date_collect/datecollect$$typecreator5$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../datacollect/target/classes/date_collect/datecollect.class" beforeDir="false" afterPath="$PROJECT_DIR$/../datacollect/target/classes/date_collect/datecollect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/lambda.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/batch_layer/predict.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generatordata/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../generatordata/src/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/batch_layer/analytic.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/batch_layer/analytic.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/config/AppConfiguration.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/config/AppConfiguration.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/main_package/main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/main_package/main.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/speed_layer/real_time_data.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/speed_layer/real_time_data.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/batch_layer/AnalyticProcessing$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/batch_layer/AnalyticProcessing$.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/batch_layer/BatchProcessingActor$$anonfun$receive$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/batch_layer/BatchProcessingActor$$anonfun$receive$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/batch_layer/BatchProcessingActor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/batch_layer/BatchProcessingActor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/batch_layer/analytic.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/batch_layer/analytic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/AppConfiguration$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/AppConfiguration$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/AppConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/AppConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main_package/main$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main_package/main$$anonfun$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main_package/main$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main_package/main$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/speed_layer/real_time_data.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/speed_layer/real_time_data.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../database/cassandra/cassandra_schema.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../database/cassandra/cassandra_schema.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,14 +63,14 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -88,19 +109,45 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="449" y="154" width="524" height="484" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1584900333256">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state x="236" y="41" width="1024" height="845" key="#Project_Structure" timestamp="1589793555554">
+      <screen x="67" y="27" width="1373" height="873" />
+    </state>
+    <state x="236" y="41" width="1024" height="845" key="#Project_Structure/67.27.1373.873@67.27.1373.873" timestamp="1589793555554" />
+    <state x="471" y="177" width="524" height="484" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1590993723072">
+      <screen x="67" y="27" width="1373" height="873" />
     </state>
     <state x="449" y="154" width="524" height="484" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/67.27.1299.741@67.27.1299.741" timestamp="1584900333256" />
+    <state x="471" y="177" width="524" height="484" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/67.27.1373.873@67.27.1373.873" timestamp="1590993723072" />
+    <state x="211" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589792382136">
+      <screen x="67" y="27" width="1373" height="873" />
+    </state>
+    <state x="211" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1373.873@67.27.1373.873" timestamp="1589792382136" />
+    <state x="531" y="380" width="434" height="167" key="#com.intellij.framework.addSupport.AddSupportForSingleFrameworkDialog" timestamp="1589791410380">
+      <screen x="67" y="27" width="1373" height="873" />
+    </state>
+    <state x="531" y="380" width="434" height="167" key="#com.intellij.framework.addSupport.AddSupportForSingleFrameworkDialog/67.27.1373.873@67.27.1373.873" timestamp="1589791410380" />
     <state x="444" y="183" width="525" height="428" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1584900525713">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="444" y="183" width="525" height="428" key="#com.intellij.ide.util.TreeClassChooserDialog/67.27.1299.741@67.27.1299.741" timestamp="1584900525713" />
-    <state x="424" y="66" width="575" height="661" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1588839514341">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state x="444" y="73" width="579" height="661" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1589791736589">
+      <screen x="67" y="27" width="1373" height="873" />
     </state>
     <state x="424" y="66" width="575" height="661" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/67.27.1299.741@67.27.1299.741" timestamp="1588839514341" />
+    <state x="444" y="73" width="579" height="661" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/67.27.1373.873@67.27.1373.873" timestamp="1589791736589" />
     <state x="399" y="124" width="624" height="544" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1585838059263">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -109,30 +156,36 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="170" y="316" width="518" height="306" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/67.27.1299.741@67.27.1299.741" timestamp="1584900055911" />
-    <state x="494" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1589384431822">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state x="518" y="177" width="424" height="484" key="FileChooserDialogImpl" timestamp="1589793456791">
+      <screen x="67" y="27" width="1373" height="873" />
     </state>
     <state x="494" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1589384431822" />
-    <state width="1253" height="139" key="GridCell.Tab.0.bottom" timestamp="1590167844976">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state x="518" y="177" width="424" height="484" key="FileChooserDialogImpl/67.27.1373.873@67.27.1373.873" timestamp="1589793456791" />
+    <state width="1327" height="205" key="GridCell.Tab.0.bottom" timestamp="1590995129949">
+      <screen x="67" y="27" width="1373" height="873" />
     </state>
-    <state width="1253" height="139" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1590167844976" />
-    <state width="1253" height="139" key="GridCell.Tab.0.center" timestamp="1590167844974">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state width="1253" height="139" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1588322706928" />
+    <state width="1327" height="205" key="GridCell.Tab.0.bottom/67.27.1373.873@67.27.1373.873" timestamp="1590995129949" />
+    <state width="1327" height="205" key="GridCell.Tab.0.center" timestamp="1590995129948">
+      <screen x="67" y="27" width="1373" height="873" />
     </state>
-    <state width="1253" height="139" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1590167844974" />
-    <state width="1253" height="139" key="GridCell.Tab.0.left" timestamp="1590167844973">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state width="1253" height="139" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1588322706927" />
+    <state width="1327" height="205" key="GridCell.Tab.0.center/67.27.1373.873@67.27.1373.873" timestamp="1590995129948" />
+    <state width="1327" height="205" key="GridCell.Tab.0.left" timestamp="1590995129948">
+      <screen x="67" y="27" width="1373" height="873" />
     </state>
-    <state width="1253" height="139" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1590167844973" />
-    <state width="1253" height="139" key="GridCell.Tab.0.right" timestamp="1590167844975">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state width="1253" height="139" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1588322706926" />
+    <state width="1327" height="205" key="GridCell.Tab.0.left/67.27.1373.873@67.27.1373.873" timestamp="1590995129948" />
+    <state width="1327" height="205" key="GridCell.Tab.0.right" timestamp="1590995129948">
+      <screen x="67" y="27" width="1373" height="873" />
     </state>
-    <state width="1253" height="139" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1590167844975" />
-    <state x="199" y="27" width="1024" height="741" key="SettingsEditor" timestamp="1589383996976">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state width="1253" height="139" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1588322706927" />
+    <state width="1327" height="205" key="GridCell.Tab.0.right/67.27.1373.873@67.27.1373.873" timestamp="1590995129948" />
+    <state x="207" y="27" width="1024" height="845" key="SettingsEditor" timestamp="1589793459900">
+      <screen x="67" y="27" width="1373" height="873" />
     </state>
     <state x="199" y="27" width="1024" height="741" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1589383996976" />
+    <state x="207" y="27" width="1024" height="845" key="SettingsEditor/67.27.1373.873@67.27.1373.873" timestamp="1589793459900" />
     <state x="372" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1589383243379">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -141,9 +194,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="67" y="27" width="869" height="741" key="find.popup/67.27.1299.741@67.27.1299.741" timestamp="1584900149279" />
-    <state x="67" y="100" width="1289" height="592" key="new project wizard" timestamp="1586789480644">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state x="67" y="113" width="1289" height="592" key="new project wizard" timestamp="1589792960293">
+      <screen x="67" y="27" width="1373" height="873" />
     </state>
     <state x="67" y="100" width="1289" height="592" key="new project wizard/67.27.1299.741@67.27.1299.741" timestamp="1586789480644" />
+    <state x="67" y="113" key="new project wizard/67.27.1373.873@67.27.1373.873" timestamp="1589792960293" />
   </component>
 </project>

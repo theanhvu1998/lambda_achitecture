@@ -30,15 +30,16 @@ def on_disconnect(client, userdata, rc):
 
 # publish topic
 def PublishTopic(mqttc,rc,topicm, deviceid):
+    time.sleep(2)
     while rc==0:
-        ran=random.randint(600,986400)
+        ran=random.randint(120,17280)
         timeo1=int(time.time()*1000)
         sessionid=deviceid+"-"+str(timeo1)+"-"+"r"
         tf=random.uniform(0.5, 2)
         ttw=random.randint(120, 300)
         tw0=random.randint(15, 80)
 
-        mssido1=deviceid+"-"+str(timeo1)+"-"+"electrical"
+        mssido1=deviceid+"-"+str(timeo1)+"-"+"operation"
         operation1={
             'rpi':deviceid,
             'time': timeo1,
@@ -46,25 +47,26 @@ def PublishTopic(mqttc,rc,topicm, deviceid):
             'msgid': mssido1,
             'sessionid': sessionid,
             'data':[
-                {"id":"g01opetb","v":str(time.time())}
+                {"id":"g01opetb","v":str(timeo1)},
+                {"id":"g01opete","v":str(0)}
             ]
             }
         messeneoa=json.dumps(operation1)
         mqttc.publish(topicm, messeneoa)
-
         for i in range(ran):
+            time.sleep(5)
             errort=random.uniform(-1, 1)
-            error2=random.uniform(-3, 3)
+            g01eleia=random.uniform(40, 55)
+            g01eleib=random.uniform(50, 60)
+            g01eleic=random.uniform(40, 55)
+            g01elevab=random.uniform(240, 380)
+            g01eles=random.uniform(90, 113)
             f=random.randint(1480, 1520)
 
             timee=int(time.time()*1000)
 
             msside=deviceid+"-"+str(timee)+"-"+"electrical"
-
             te=i+errort
-            g01eleib=100+errort
-            g01elevab=125+error2
-            g01eles=125+error2
             g01elef=f*(1-math.e**(-te/tf))
             electrical={
             'rpi':deviceid,
@@ -73,9 +75,9 @@ def PublishTopic(mqttc,rc,topicm, deviceid):
             'msgid': msside,
             'sessionid': sessionid,
             'data':[
-                {"id":"g01eleia","v":str(g01eleib)},
+                {"id":"g01eleia","v":str(g01eleia)},
                 {"id":"g01eleib","v":str(g01eleib)},
-                {"id":"g01eleic","v":str(g01eleib)},
+                {"id":"g01eleic","v":str(g01eleic)},
                 {"id":"g01elevab","v":str(g01elevab)},
                 {"id":"g01eles","v":str(g01eles)},
                 {"id":"g01elef","v":str(g01elef)}
@@ -88,7 +90,7 @@ def PublishTopic(mqttc,rc,topicm, deviceid):
 
             erroro2=random.uniform(-0.4, 0.4)
             errorh2s=random.uniform(-10, 10)
-            tw=random.randint(80, 90)
+            tw=random.randint(55, 65)
 
             timeev=int(time.time()*1000)
 
@@ -125,7 +127,8 @@ def PublishTopic(mqttc,rc,topicm, deviceid):
             'msgid': mssido2,
             'sessionid': sessionid,
             'data':[
-                {"id":"g01opetb","v":str(time.time())}
+                {"id":"g01opetb","v":str(timeo1)},
+                {"id":"g01opete","v":str(timeo2)}
             ]
             }
         messeneob=json.dumps(operation2)
@@ -133,13 +136,13 @@ def PublishTopic(mqttc,rc,topicm, deviceid):
     print("error")
 
 # id of raspery
-device_id = "rpi01"
+device_id = "go1"
 
 # infor of mqtt broker
 broker_url = 'localhost'
 broker_port = 1883
-broker_user_name = 'anhvu'
-broker_password = '220805070602'
+broker_user_name = 'biogas'
+broker_password = 'biogas'
 topicm = 'messenger'
 topics = 'status'
 
@@ -163,10 +166,9 @@ try:
     mssidstt=device_id+"-"+str(timestt)+"-"+"status"
     mydata={
     'rpi': device_id,
-    'time': timestt,
     'type': 'status',
     'msgid': mssidstt,
-    'status': "offline"
+    'status': 'offline'
     }
     strdata=json.dumps(mydata)
     mqttc.will_set(topics, payload=strdata, qos=2, retain=True)

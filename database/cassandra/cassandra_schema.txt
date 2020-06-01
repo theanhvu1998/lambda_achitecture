@@ -22,7 +22,7 @@ created table messenger:
 
 created table status:
 	CREATE TABLE status(
-	id text PRIMARY KEY,
+	msgid text PRIMARY KEY,
 	rpi text,
 	userid text,
 	time bigint,
@@ -34,7 +34,7 @@ created table status:
 
 created table user:
 	CREATE TABLE user(
-	id text PRIMARY KEY,
+	msgid text PRIMARY KEY,
 	generator_id text,
 	name text,
 	city smallint,
@@ -49,7 +49,7 @@ created table user:
 
 created table generator:
 	CREATE TABLE generator(
-	id text PRIMARY KEY,
+	msgid text PRIMARY KEY,
 	userid text,
 	insatll bigint,
 	city smallint,

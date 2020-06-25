@@ -25,23 +25,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd1540d5-fcd9-439d-9a69-b8bac0190be8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/lambda.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/batch_layer/predict.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/batch_layer/data_clean.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../generatordata/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../generatordata/src/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/batch_layer/analytic.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/batch_layer/analytic.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/batch_layer/analytic.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/batch_layer/data_analytic.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/batch_layer/predict.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/batch_layer/data_predict.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/config/AppConfiguration.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/config/AppConfiguration.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/main_package/main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/main_package/main.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/speed_layer/real_time_data.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/speed_layer/real_time_data.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/batch_layer/AnalyticProcessing$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/batch_layer/AnalyticProcessing$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/batch_layer/AnalyticProcessing.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/batch_layer/AnalyticProcessing.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/batch_layer/BatchProcessingActor$$anonfun$receive$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/batch_layer/BatchProcessingActor$$anonfun$receive$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/batch_layer/BatchProcessingActor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/batch_layer/BatchProcessingActor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/batch_layer/analytic.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/batch_layer/analytic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/batch_layer/analytic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/batch_layer/predict.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/batch_layer/predictProcessing$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/batch_layer/predictProcessing$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/batch_layer/predictProcessing.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/batch_layer/predictProcessing.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/batch_layer/predictProcessingActor$$anonfun$receive$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/batch_layer/predictProcessingActor$$anonfun$receive$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/batch_layer/predictProcessingActor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/batch_layer/predictProcessingActor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/AppConfiguration$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/AppConfiguration$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/AppConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/AppConfiguration.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/main_package/main$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main_package/main$$anonfun$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main_package/main$$anonfun$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main_package/main$$anonfun$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/main_package/main$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main_package/main$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main_package/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main_package/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/speed_layer/realTimeProcessing$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/speed_layer/realTimeProcessing$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/speed_layer/realTimeProcessingActor$$anonfun$receive$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/speed_layer/realTimeProcessingActor$$anonfun$receive$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/speed_layer/realTimeProcessingActor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/speed_layer/realTimeProcessingActor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/speed_layer/real_time_data.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/speed_layer/real_time_data.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../database/cassandra/cassandra_schema.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../database/cassandra/cassandra_schema.txt" afterDir="false" />
     </list>
@@ -126,11 +138,11 @@
       <screen x="67" y="27" width="1373" height="873" />
     </state>
     <state x="236" y="41" width="1024" height="845" key="#Project_Structure/67.27.1373.873@67.27.1373.873" timestamp="1589793555554" />
-    <state x="471" y="177" width="524" height="484" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1590993723072">
+    <state x="471" y="177" width="524" height="484" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1593053906537">
       <screen x="67" y="27" width="1373" height="873" />
     </state>
     <state x="449" y="154" width="524" height="484" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/67.27.1299.741@67.27.1299.741" timestamp="1584900333256" />
-    <state x="471" y="177" width="524" height="484" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/67.27.1373.873@67.27.1373.873" timestamp="1590993723072" />
+    <state x="471" y="177" width="524" height="484" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/67.27.1373.873@67.27.1373.873" timestamp="1593053906537" />
     <state x="211" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589792382136">
       <screen x="67" y="27" width="1373" height="873" />
     </state>
@@ -161,26 +173,26 @@
     </state>
     <state x="494" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1589384431822" />
     <state x="518" y="177" width="424" height="484" key="FileChooserDialogImpl/67.27.1373.873@67.27.1373.873" timestamp="1589793456791" />
-    <state width="1327" height="205" key="GridCell.Tab.0.bottom" timestamp="1590995129949">
+    <state width="1327" height="205" key="GridCell.Tab.0.bottom" timestamp="1593057307320">
       <screen x="67" y="27" width="1373" height="873" />
     </state>
     <state width="1253" height="139" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1588322706928" />
-    <state width="1327" height="205" key="GridCell.Tab.0.bottom/67.27.1373.873@67.27.1373.873" timestamp="1590995129949" />
-    <state width="1327" height="205" key="GridCell.Tab.0.center" timestamp="1590995129948">
+    <state width="1327" height="205" key="GridCell.Tab.0.bottom/67.27.1373.873@67.27.1373.873" timestamp="1593057307320" />
+    <state width="1327" height="205" key="GridCell.Tab.0.center" timestamp="1593057307320">
       <screen x="67" y="27" width="1373" height="873" />
     </state>
     <state width="1253" height="139" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1588322706927" />
-    <state width="1327" height="205" key="GridCell.Tab.0.center/67.27.1373.873@67.27.1373.873" timestamp="1590995129948" />
-    <state width="1327" height="205" key="GridCell.Tab.0.left" timestamp="1590995129948">
+    <state width="1327" height="205" key="GridCell.Tab.0.center/67.27.1373.873@67.27.1373.873" timestamp="1593057307320" />
+    <state width="1327" height="205" key="GridCell.Tab.0.left" timestamp="1593057307319">
       <screen x="67" y="27" width="1373" height="873" />
     </state>
     <state width="1253" height="139" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1588322706926" />
-    <state width="1327" height="205" key="GridCell.Tab.0.left/67.27.1373.873@67.27.1373.873" timestamp="1590995129948" />
-    <state width="1327" height="205" key="GridCell.Tab.0.right" timestamp="1590995129948">
+    <state width="1327" height="205" key="GridCell.Tab.0.left/67.27.1373.873@67.27.1373.873" timestamp="1593057307319" />
+    <state width="1327" height="205" key="GridCell.Tab.0.right" timestamp="1593057307320">
       <screen x="67" y="27" width="1373" height="873" />
     </state>
     <state width="1253" height="139" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1588322706927" />
-    <state width="1327" height="205" key="GridCell.Tab.0.right/67.27.1373.873@67.27.1373.873" timestamp="1590995129948" />
+    <state width="1327" height="205" key="GridCell.Tab.0.right/67.27.1373.873@67.27.1373.873" timestamp="1593057307320" />
     <state x="207" y="27" width="1024" height="845" key="SettingsEditor" timestamp="1589793459900">
       <screen x="67" y="27" width="1373" height="873" />
     </state>

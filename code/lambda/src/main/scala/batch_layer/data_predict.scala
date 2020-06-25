@@ -4,7 +4,7 @@ import akka.actor.{Actor}
 import org.apache.spark.ml.feature.VectorAssembler
 import org.apache.spark.sql.SparkSession
 
-class predict {
+class data_predict {
   //Create a Spark session which connect to Cassandra
   val spark=SparkSession.builder().appName("Lambda Architecture - batch layer - predict")
     .master("local")
@@ -64,7 +64,7 @@ class predict {
 case object predictProcessing
 
 //Define BatchProcessing actor
-class predictProcessingActor(spark_processor: predict) extends Actor{
+class predictProcessingActor(spark_processor: data_predict) extends Actor{
 
   //Implement receive method
   def receive = {

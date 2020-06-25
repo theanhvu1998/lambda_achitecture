@@ -1,12 +1,13 @@
-package speed_layer
+package batch_layer
 
 import akka.actor.Actor
 import config.AppConfiguration
 import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.functions.from_json
 import org.apache.spark.sql.types.{ArrayType, LongType, MapType, StringType, StructField, StructType}
-import org.apache.spark.sql.functions.{col, desc, explode, from_json, lower, unix_timestamp}
+import speed_layer.real_time_data
 
-class real_time_data {
+class data_clean {
   //Define a Spark session
   val spark=SparkSession.builder().appName("Lambda Architecture - Speed layer")
     .master("local")
@@ -19,57 +20,53 @@ class real_time_data {
   import spark.implicits._
 
   //Define Schema of received tweet streem
-  val DataScheme
+  val twitterDataScheme
   = StructType(
     List(
       StructField("rpi", StringType, true),
+      StructField("time", LongType, true),
       StructField("type", StringType, true),
       StructField("msgid", StringType, true),
-      StructField("status", StringType,true)
+      StructField("sessionid", StringType, true),
+      StructField("data", ArrayType(MapType(StringType,StringType,true),true),true)
     )
   )
 
-  def realtimeAactor: Unit = {
+  def cleanDataActor: Unit = {
     //Subscribe Spark the defined Kafka topic
     val df = spark.readStream.format("kafka")
       .option("kafka.bootstrap.servers", "localhost:9092")
       .option("subscribe", AppConfiguration.kafkaTopicStatus)
-      .option("failOnDataLoss",false)
       .load()
 
     //Reading the streaming json data with its schema
     val messenger = df.selectExpr("CAST(value AS STRING) as jsonData")
       .select(from_json($"jsonData"
-        , schema = DataScheme).as("status"))
-      .select("status.*")
-
-    val messengerpaser = messenger.select(col("status")
-        ,col("rpi")
-        ,col("msgid")
-        ,col("type"))
-        .withColumn("time",(unix_timestamp()*1000))
-
-    messengerpaser.selectExpr("CAST(msgid AS STRING) AS key"
-        , "to_json(struct(*)) AS value")
+        , schema = twitterDataScheme).as("data"))
+      .select("data.*")
+    messenger
+    messenger.selectExpr("CAST(msgid AS STRING) AS key"
+      , "to_json(struct(*)) AS value")
       .writeStream
       .format("kafka")
       .option("kafka.bootstrap.servers", "localhost:9092")
-      .option("topic", AppConfiguration.kafkaTopicStatusAnalitic)
+      .option("topic", "test")
       .option("checkpointLocation", "/tmp/vaquarkhan/checkpoint")
       .start()
   }
 }
-case object realTimeProcessing
+
+case object cleanDataprocessing
 
 //Define BatchProcessing actor
-class realTimeProcessingActor(spark_processor: real_time_data) extends Actor{
+class realTimeProcessingActor(spark_processor: data_clean) extends Actor{
 
   //Implement receive method
   def receive = {
     //Start hashtag batch processing
-    case realTimeProcessing => {
+    case cleanDataprocessing => {
       println("\nStart speed processing...")
-      spark_processor.realtimeAactor
+      spark_processor.cleanDataActor
     }
   }
 }

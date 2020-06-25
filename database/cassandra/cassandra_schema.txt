@@ -111,6 +111,16 @@ created table ml:
 	g01elef float,
 	);
 
+created table feature:
+	CREATE TABLE feature(
+	id text PRIMARY KEY,
+	sessionid text,
+	durationstart float,
+	maxtem float,
+	mintem float,
+	avrtem float
+	);
+
 # defaul tables
 
 created table city:

@@ -9,6 +9,7 @@ import math
 def on_connect(client, userdata, flags, rc):
     if rc==0:
         print("connected is OK")
+        # client.will_set(topics, payload=strdata, qos=2, retain=True)
     else:
         print("Bad connected wiht error :" + rc)
     
@@ -30,14 +31,25 @@ def on_disconnect(client, userdata, rc):
 
 # publish topic
 def PublishTopic(mqttc,rc,topicm, deviceid):
-    time.sleep(2)
+    time.sleep(5)
     while rc==0:
-        ran=random.randint(120,17280)
         timeo1=int(time.time()*1000)
+        mssidstt=deviceid+"-"+str(timeo1)+"-"+"status"
+        mydata={
+        'rpi': deviceid,
+        'type': 'status',
+        'msgid': mssidstt,
+        'status': 'online'
+        }
+        strdata=json.dumps(mydata)
+        mqttc.publish('status', strdata)
+        time.sleep(3)
+        ran=random.randint(60,2880)
+       
         sessionid=deviceid+"-"+str(timeo1)+"-"+"r"
         tf=random.uniform(0.5, 2)
         ttw=random.randint(120, 300)
-        tw0=random.randint(15, 80)
+        tw0=random.randint(15, 25)
 
         mssido1=deviceid+"-"+str(timeo1)+"-"+"operation"
         operation1={
@@ -53,8 +65,8 @@ def PublishTopic(mqttc,rc,topicm, deviceid):
             }
         messeneoa=json.dumps(operation1)
         mqttc.publish(topicm, messeneoa)
+        time.sleep(5)
         for i in range(ran):
-            time.sleep(5)
             errort=random.uniform(-1, 1)
             g01eleia=random.uniform(40, 55)
             g01eleib=random.uniform(50, 60)
@@ -86,7 +98,7 @@ def PublishTopic(mqttc,rc,topicm, deviceid):
 
             messene=json.dumps(electrical)
             mqttc.publish(topicm, messene)
-            time.sleep(3)
+            time.sleep(2)
 
             erroro2=random.uniform(-0.4, 0.4)
             errorh2s=random.uniform(-10, 10)
@@ -113,11 +125,11 @@ def PublishTopic(mqttc,rc,topicm, deviceid):
                 {"id":"g01envh2s","v":str(g01envh2s)}
             ]
             }
-
             messenev=json.dumps(environmental)
             mqttc.publish(topicm, messenev)
             time.sleep(2)
-
+            
+            
         timeo2=int(time.time()*1000)
         mssido2=deviceid+"-"+str(timeo2)+"-"+"operation"
         operation2={
@@ -133,6 +145,17 @@ def PublishTopic(mqttc,rc,topicm, deviceid):
             }
         messeneob=json.dumps(operation2)
         mqttc.publish(topicm, messeneob)
+        time.sleep(2)
+        mssidstt=deviceid+"-"+str(timeo2)+"-"+"status"
+        mydata1={
+        'rpi': deviceid,
+        'type': 'status',
+        'msgid': mssidstt,
+        'status': 'offline'
+        }
+        strdata1=json.dumps(mydata1)
+        mqttc.publish('status', strdata1)
+        time.sleep(3)
     print("error")
 
 # id of raspery
@@ -162,16 +185,7 @@ mqttc.on_disconnect = on_disconnect
 print(connect_string)
 # Connect
 try:
-    timestt=int(time.time()*1000)
-    mssidstt=device_id+"-"+str(timestt)+"-"+"status"
-    mydata={
-    'rpi': device_id,
-    'type': 'status',
-    'msgid': mssidstt,
-    'status': 'offline'
-    }
-    strdata=json.dumps(mydata)
-    mqttc.will_set(topics, payload=strdata, qos=2, retain=True)
+    
     mqttc.username_pw_set(broker_user_name, broker_password)
     mqttc.connect(broker_url, broker_port)
     # Start subscribe, with QoS level 2

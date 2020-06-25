@@ -7,8 +7,8 @@ import scala.concurrent.duration.Duration
 object AppConfiguration {
   val config = ConfigFactory.load()
   // Kafka Config
-  val kafkaTopic=config.getString("kafka.topic")
-  val kafkaKeywords = config.getStringList("kafka.keywords").toList
+  val kafkaTopicStatus=config.getString("kafka.topicStatus")
+  val kafkaTopicStatusAnalitic=config.getString("kafka.topicStatusAnalytic")
 
   // Batch processing config
   // Convert Duration to Finite Duration
